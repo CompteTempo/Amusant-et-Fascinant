@@ -5,14 +5,56 @@
     <title>Évolution Humaine</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Bienvenue sur l'Évolution Humaine</h1>
-    <p>Un site interactif pour comprendre l'histoire de la vie et de l'humanité.</p>
 
-    <nav>
-        <a href="chapters/01_origines.html">Chapitre 1 : Origines de la Terre</a>
-    </nav>
+    <!-- SECTION HERO -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Explorer l'Histoire de la Vie</h1>
+            <p>Un voyage interactif depuis la naissance de la Terre jusqu'à l'émergence de l'humanité.</p>
+            <a href="#chapters" class="cta">Commencer l'exploration</a>
+        </div>
+    </header>
 
-    <script src="script.js"></script>
+    <!-- SECTION CHAPITRES -->
+    <section id="chapters" class="chapters">
+        <h2>Chapitres</h2>
+
+        <div class="chapter-grid">
+
+            <a href="chapters/01_origines.html" class="chapter-card">
+                <h3>Origines de la Terre</h3>
+                <p>La formation de notre planète et les premières conditions de vie.</p>
+            </a>
+
+            <a href="chapters/02_terre_primitive.html" class="chapter-card">
+                <h3>La Terre Primitive</h3>
+                <p>Océans, atmosphère, premières molécules… un monde en construction.</p>
+            </a>
+
+            <a href="chapters/03_premieres_cellules.html" class="chapter-card">
+                <h3>Premières Cellules</h3>
+                <p>L’apparition du vivant et les premières évolutions.</p>
+            </a>
+
+            <a href="chapters/04_evolution_animale.html" class="chapter-card">
+                <h3>Évolution Animale</h3>
+                <p>Des invertébrés aux premiers vertébrés, une explosion de formes.</p>
+            </a>
+
+            <a href="chapters/05_hominides.html" class="chapter-card">
+                <h3>Hominidés</h3>
+                <p>Les ancêtres de l’humanité et leurs caractéristiques.</p>
+            </a>
+
+            <a href="chapters/06_homo_sapiens.html" class="chapter-card">
+                <h3>Homo Sapiens</h3>
+                <p>Notre espèce, ses migrations et ses cultures.</p>
+            </a>
+
+        </div>
+    </section>
+
 </body>
 </html>
