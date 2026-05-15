@@ -50,22 +50,38 @@ const images = [
 
 let currentIndex = 0;
 const container = document.getElementById("animationContainer");
-const button = document.getElementById("nextButton");
 
-button.addEventListener("click", () => {
-  if (currentIndex < images.length) {
-    const img = document.createElement("img");
-    img.src = images[currentIndex];
-    img.alt = "Étape " + (currentIndex + 1);
-    container.appendChild(img);
+// Fonction pour afficher une étape
+function showStep(index) {
+  const img = document.createElement("img");
+  img.src = images[index];
+  img.alt = "Étape " + (index + 1);
+  container.appendChild(img);
 
-    // Animation d’apparition
-    setTimeout(() => img.classList.add("visible"), 50);
+  // Animation d’apparition
+  setTimeout(() => img.classList.add("visible"), 50);
 
-    currentIndex++;
-    if (currentIndex === images.length) {
-      button.textContent = "Animation terminée";
-      button.disabled = true;
+  // Clique pour passer à la suivante
+  img.addEventListener("click", () => {
+    if (currentIndex < images.length - 1) {
+      currentIndex++;
+      const newImg = showStep(currentIndex);
+
+      // Scroll vers la nouvelle image
+      setTimeout(() => {
+        newImg.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+
+    } else {
+      img.insertAdjacentHTML(
+        "afterend",
+        "<p style='text-align:center;font-weight:bold;'>Animation terminée 🎉</p>"
+      );
     }
-  }
-});
+  });
+
+  return img; // important : on renvoie l'image créée
+}
+
+// Affiche la première étape dès le début
+showStep(currentIndex);
