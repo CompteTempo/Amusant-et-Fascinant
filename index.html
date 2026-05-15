@@ -7,6 +7,25 @@
 </head>
 
 <body>
+<!-- MENU HAMBURGER -->
+<div class="hamburger" onclick="toggleMenu()">
+    ☰
+</div>
+
+<!-- MENU LATERAL -->
+<div id="sideMenu" class="side-menu">
+
+    <div class="menu-header">
+        <input type="text" id="searchInput" placeholder="Rechercher..." oninput="searchSite()">
+    </div>
+
+    <div class="menu-links">
+        <a href="index.html">🏠 Index</a>
+        <a href="sources.html">📚 Sources</a>
+    </div>
+
+    <div id="searchResults" class="search-results"></div>
+</div>
 
     <!-- SECTION HERO -->
     <header class="hero">
