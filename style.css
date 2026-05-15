@@ -185,3 +185,27 @@ body {
 .search-results div:hover {
     background: #444;
 }
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -280px; /* caché par défaut */
+  width: 250px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu.open {
+  left: 0; /* visible quand ouvert */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}

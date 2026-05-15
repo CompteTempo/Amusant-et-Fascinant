@@ -1,6 +1,7 @@
 console.log("Site chargé !");
 function toggleMenu() {
-    document.getElementById("sideMenu").classList.toggle("open");
+  const menu = document.getElementById("sideMenu");
+  menu.classList.toggle("open");
 }
 
 /* Liste des chapitres à scanner */
