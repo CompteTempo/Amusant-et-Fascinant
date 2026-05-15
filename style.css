@@ -102,31 +102,39 @@ body {
     margin: 0;
     color: #555;
 }
-/* HAMBURGER */
+/* HAMBURGER ICON */
 .hamburger {
     position: fixed;
     top: 20px;
     left: 20px;
-    font-size: 2rem;
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     cursor: pointer;
     z-index: 1000;
-    color: white;
-    background: rgba(0,0,0,0.4);
-    padding: 8px 12px;
-    border-radius: 6px;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
 }
 
 /* MENU LATERAL */
 .side-menu {
     position: fixed;
     top: 0;
-    left: -300px;
-    width: 260px;
+    left: -280px;
+    width: 250px;
     height: 100%;
-    background: #222;
+    background: rgba(0, 0, 0, 0.9);
     color: white;
     padding: 20px;
-    transition: 0.3s;
+    transition: left 0.3s ease;
     z-index: 999;
     display: flex;
     flex-direction: column;
@@ -136,20 +144,24 @@ body {
     left: 0;
 }
 
+/* HEADER DU MENU */
 .menu-header input {
     width: 100%;
     padding: 10px;
     border-radius: 6px;
     border: none;
     margin-bottom: 20px;
+    font-size: 1rem;
 }
 
+/* LIENS DU MENU */
 .menu-links a {
     display: block;
     color: white;
     text-decoration: none;
     padding: 10px 0;
     font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 .menu-links a:hover {
