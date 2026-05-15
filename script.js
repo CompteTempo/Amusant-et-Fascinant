@@ -38,3 +38,34 @@ async function searchSite() {
         }
     }
 }
+
+/* === Animation de l'évolution des lapins === */
+const images = [
+  "../assets/lapin1.png", // Variation
+  "../assets/lapin2.png", // Sélection
+  "../assets/lapin3.png", // Succès différentiel
+  "../assets/lapin4.png", // Transmission
+  "../assets/lapin5.png"  // Évolution
+];
+
+let currentIndex = 0;
+const container = document.getElementById("animationContainer");
+const button = document.getElementById("nextButton");
+
+button.addEventListener("click", () => {
+  if (currentIndex < images.length) {
+    const img = document.createElement("img");
+    img.src = images[currentIndex];
+    img.alt = "Étape " + (currentIndex + 1);
+    container.appendChild(img);
+
+    // Animation d’apparition
+    setTimeout(() => img.classList.add("visible"), 50);
+
+    currentIndex++;
+    if (currentIndex === images.length) {
+      button.textContent = "Animation terminée";
+      button.disabled = true;
+    }
+  }
+});
