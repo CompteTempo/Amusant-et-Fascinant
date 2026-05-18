@@ -67,9 +67,9 @@ function showStep(index) {
       currentIndex++;
       const newImg = showStep(currentIndex);
 
-      // Scroll vers la nouvelle image
+      // Defile horizontalement vers la nouvelle image
       setTimeout(() => {
-        newImg.scrollIntoView({ behavior: "smooth", block: "start" });
+        newImg.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
       }, 100);
 
     } else {
